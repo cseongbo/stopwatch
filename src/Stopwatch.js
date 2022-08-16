@@ -20,7 +20,8 @@ class Stopwatch extends Component {
         // componentWillUnmount는 컴포넌트가 DOM상에서 제거 될때 호출
         clearInterval(this.timerId)
     }
-    
+    // test
+    // test
     tick() {
         if (this.state.isLive) {
             this.setState({
@@ -30,6 +31,9 @@ class Stopwatch extends Component {
     }
 
     getDisp() {
+        // floor는 소수점이하를 버림
+        // ceil()는 소수점이하를 올림
+        // round()는 소수점이하를 반올림
         const s = this.state
         const delta = s.curTime - s.startTime
         const t = Math.floor(delta/1000)
